@@ -1,3 +1,8 @@
+/.idea
+.DS_Store
+.env
+!.gitkeep
+*.iml
 chronograf/data/
 influxdb/data/
 kapacitor/data/

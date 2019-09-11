@@ -1,4 +1,4 @@
 FROM chronograf:latest
 
-COPY config/sandbox.src ./usr/share/chronograf/resources/
-COPY config/sandbox-kapa.kap ./usr/share/chronograf/resources/
+COPY config/config.src ./usr/share/chronograf/resources/
+COPY config/kapacitor.kap ./usr/share/chronograf/resources/
