@@ -6,3 +6,5 @@
 chronograf/data/
 influxdb/data/
 kapacitor/data/
+kapacitor/config/
+telegraf/data/
