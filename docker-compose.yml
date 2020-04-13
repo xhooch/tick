@@ -5,6 +5,7 @@ services:
       context: ./influxdb/image
       dockerfile: Dockerfile
     image: influxdb
+    restart: always
     environment:
       - INFLUXDB_HTTP_AUTH_ENABLED=${AUTH_ENABLED}
       - INFLUXDB_ADMIN_USER=root
@@ -29,6 +30,7 @@ services:
       context: ./telegraf/image
       dockerfile: Dockerfile
     image: telegraf
+    restart: always
     environment:
       - HOSTNAME=telegraf
     volumes:
@@ -46,6 +48,7 @@ services:
       context: ./kapacitor/image
       dockerfile: Dockerfile
     image: kapacitor
+    restart: always
     volumes:
       # Mount for kapacitor data directory
       - ./kapacitor/data/:/var/lib/kapacitor
@@ -60,6 +63,7 @@ services:
       context: ./chronograf/image
       dockerfile: Dockerfile
     image: chronograf
+    restart: always
     environment:
       - RESOURCES_PATH=/usr/share/chronograf/resources
     volumes:
